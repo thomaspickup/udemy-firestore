@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E26C8DFAED001A7F29A0482 /* Pods_rndm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D2F098A6257957C6915F56 /* Pods_rndm.framework */; };
 		FE4E054C21AB54D500F61708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E054B21AB54D500F61708 /* AppDelegate.swift */; };
 		FE4E054E21AB54D500F61708 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E054D21AB54D500F61708 /* ViewController.swift */; };
 		FE4E055121AB54D500F61708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4E054F21AB54D500F61708 /* Main.storyboard */; };
 		FE4E055321AB54D700F61708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4E055221AB54D700F61708 /* Assets.xcassets */; };
 		FE4E055621AB54D700F61708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4E055421AB54D700F61708 /* LaunchScreen.storyboard */; };
+		FE4E056021AB559F00F61708 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE4E055F21AB559F00F61708 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04D2F098A6257957C6915F56 /* Pods_rndm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rndm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29DE6E218BCC3609C1912650 /* Pods-rndm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rndm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rndm/Pods-rndm.debug.xcconfig"; sourceTree = "<group>"; };
+		43F6D03EDDBAB99954BCA939 /* Pods-rndm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rndm.release.xcconfig"; path = "Pods/Target Support Files/Pods-rndm/Pods-rndm.release.xcconfig"; sourceTree = "<group>"; };
 		FE4E054821AB54D500F61708 /* rndm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rndm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4E054B21AB54D500F61708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE4E054D21AB54D500F61708 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		FE4E055221AB54D700F61708 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE4E055521AB54D700F61708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE4E055721AB54D700F61708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE4E055F21AB559F00F61708 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E26C8DFAED001A7F29A0482 /* Pods_rndm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E4A74A7F849BE543E87AE4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29DE6E218BCC3609C1912650 /* Pods-rndm.debug.xcconfig */,
+				43F6D03EDDBAB99954BCA939 /* Pods-rndm.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		72AF73FCF46113F285A53192 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04D2F098A6257957C6915F56 /* Pods_rndm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE4E053F21AB54D500F61708 = {
 			isa = PBXGroup;
 			children = (
 				FE4E054A21AB54D500F61708 /* rndm */,
 				FE4E054921AB54D500F61708 /* Products */,
+				5E4A74A7F849BE543E87AE4F /* Pods */,
+				72AF73FCF46113F285A53192 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +80,7 @@
 		FE4E054A21AB54D500F61708 /* rndm */ = {
 			isa = PBXGroup;
 			children = (
+				FE4E055F21AB559F00F61708 /* GoogleService-Info.plist */,
 				FE4E054B21AB54D500F61708 /* AppDelegate.swift */,
 				FE4E054D21AB54D500F61708 /* ViewController.swift */,
 				FE4E054F21AB54D500F61708 /* Main.storyboard */,
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE4E055A21AB54D700F61708 /* Build configuration list for PBXNativeTarget "rndm" */;
 			buildPhases = (
+				950E67B4554A831970AB0DBB /* [CP] Check Pods Manifest.lock */,
 				FE4E054421AB54D500F61708 /* Sources */,
 				FE4E054521AB54D500F61708 /* Frameworks */,
 				FE4E054621AB54D500F61708 /* Resources */,
+				C2D3E3C3B032068A1C00BD04 /* [CP] Embed Pods Frameworks */,
+				A5CB9BFA6FDDCBD1161334CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,12 +153,94 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE4E055621AB54D700F61708 /* LaunchScreen.storyboard in Resources */,
+				FE4E056021AB559F00F61708 /* GoogleService-Info.plist in Resources */,
 				FE4E055321AB54D700F61708 /* Assets.xcassets in Resources */,
 				FE4E055121AB54D500F61708 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		950E67B4554A831970AB0DBB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rndm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5CB9BFA6FDDCBD1161334CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-rndm/Pods-rndm-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rndm/Pods-rndm-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2D3E3C3B032068A1C00BD04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-rndm/Pods-rndm-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rndm/Pods-rndm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE4E054421AB54D500F61708 /* Sources */ = {
@@ -280,9 +392,11 @@
 		};
 		FE4E055B21AB54D700F61708 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29DE6E218BCC3609C1912650 /* Pods-rndm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VEG7S4WYT5;
 				INFOPLIST_FILE = rndm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,9 +411,11 @@
 		};
 		FE4E055C21AB54D700F61708 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43F6D03EDDBAB99954BCA939 /* Pods-rndm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VEG7S4WYT5;
 				INFOPLIST_FILE = rndm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
