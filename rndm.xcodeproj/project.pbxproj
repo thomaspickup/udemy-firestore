@@ -395,8 +395,9 @@
 			baseConfigurationReference = 29DE6E218BCC3609C1912650 /* Pods-rndm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VEG7S4WYT5;
+				DEVELOPMENT_TEAM = XKW7262355;
 				INFOPLIST_FILE = rndm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -404,6 +405,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.reviseolog.rndm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -414,8 +416,9 @@
 			baseConfigurationReference = 43F6D03EDDBAB99954BCA939 /* Pods-rndm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VEG7S4WYT5;
+				DEVELOPMENT_TEAM = XKW7262355;
 				INFOPLIST_FILE = rndm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -423,6 +426,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.reviseolog.rndm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

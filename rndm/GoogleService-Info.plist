@@ -20,6 +20,7 @@
 	<string>uk.co.reviseolog.rndm</string>
 	<key>PROJECT_ID</key>
 	<string>rndm-tpickup</string>
+	<key>STORAGE_BUCKET</key>
 	<string>rndm-tpickup.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
