@@ -15,7 +15,10 @@ enum ThoughtCategory : String {
     case popular = "popular"
 }
 class MainVC: UIViewController {
-
+    // Outlets
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

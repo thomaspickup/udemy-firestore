@@ -19,7 +19,6 @@ class AddThoughtVC: UIViewController, UITextViewDelegate {
     // Variables
     private var selectedCategory = ThoughtCategory.funny.rawValue
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,20 +38,17 @@ class AddThoughtVC: UIViewController, UITextViewDelegate {
     
     // Checks if button is pressed
     @IBAction func postBtnTapped(_ sender: Any) {
+        // Builds Array to add to collection
         guard let username = userNameTxt.text else { return }
+        let dataString = [CATEGORY : selectedCategory, NUM_COMMENTS : 0, NUM_LIKES : 0, THOUGHT_TXT : thoughtTxt.text, TIMESTAMP : FieldValue.serverTimestamp(), USERNAME : username ] as [String : Any]
         
-        // Adds post to firestore collection
-        Firestore.firestore().collection("thoughts").addDocument(data: [
-            "category" : selectedCategory,
-            "numComments" : 0,
-            "numLikes" : 0,
-            "thoughtTxt" : thoughtTxt.text,
-            "timestamp" : FieldValue.serverTimestamp(),
-            "username" : username
-            ]) { (err) in
+        // Adds array to firestore collection
+        Firestore.firestore().collection(THOUGHTS_REF).addDocument(data: dataString) { (err) in
             if let err = err {
+                // Prints error if any
                 debugPrint("Error adding document: \(err)")
             } else {
+                // Returns to the main screen if post sucessful
                 self.navigationController?.popViewController(animated: true)
             }
         }
@@ -60,6 +56,7 @@ class AddThoughtVC: UIViewController, UITextViewDelegate {
     
     // Checks if category is changed
     @IBAction func categoryChanged(_ sender: Any) {
+        // Changes value of selectedCategory based on selected segment
         switch categorySegment.selectedSegmentIndex {
         case 0:
             selectedCategory = ThoughtCategory.funny.rawValue
