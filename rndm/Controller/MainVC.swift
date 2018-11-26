@@ -26,6 +26,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableView.automaticDimension
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,7 +35,13 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "thoughtCell", for: indexPath) as? ThoughtCell {
+            cell.configureCell(thought: thoughts[indexPath.row])
+            
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
 }
 
