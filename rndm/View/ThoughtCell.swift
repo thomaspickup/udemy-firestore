@@ -29,7 +29,7 @@ class ThoughtCell: UITableViewCell {
     }
     
     @objc func likeTapped() {
-        Firestore.firestore().collection(THOUGHTS_REF).document(thought.documentId).setData([NUM_LIKES : thought.numLikes + 1], merge: true)
+        Firestore.firestore().document("\(THOUGHTS_REF)/\(thought.documentId!)").updateData([NUM_LIKES : thought.numLikes + 1])
     }
     
     func configureCell(thought : Thought) {
