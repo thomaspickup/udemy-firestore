@@ -88,22 +88,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                         debugPrint("Error fetching docs: \(err)")
                     } else {
                         self.thoughts.removeAll()
-                        
-                        guard let snap = snapshot else { return }
-                        for document in snap.documents {
-                            let data = document.data()
-                            
-                            let username = data[USERNAME] as? String ?? "Anonymous"
-                            let timestamp = data[TIMESTAMP] as? Date ?? Date()
-                            let thoughtTxt = data[THOUGHT_TXT] as? String ?? ""
-                            let numLikes = data[NUM_LIKES] as? Int ?? 0
-                            let numComments = data[NUM_COMMENTS] as? Int ?? 0
-                            let documentID = document.documentID
-                            
-                            let newThought = Thought(username: username, timestamp: timestamp, thoughtTxt: thoughtTxt, numLikes: numLikes, numComments: numComments, documentId: documentID)
-                            
-                            self.thoughts.append(newThought)
-                        }
+                        self.thoughts = Thought.parseData(snapshot: snapshot)
                         self.tableView.reloadData()
                     }
             }
@@ -116,22 +101,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                         debugPrint("Error fetching docs: \(err)")
                     } else {
                         self.thoughts.removeAll()
-                        
-                        guard let snap = snapshot else { return }
-                        for document in snap.documents {
-                            let data = document.data()
-                            
-                            let username = data[USERNAME] as? String ?? "Anonymous"
-                            let timestamp = data[TIMESTAMP] as? Date ?? Date()
-                            let thoughtTxt = data[THOUGHT_TXT] as? String ?? ""
-                            let numLikes = data[NUM_LIKES] as? Int ?? 0
-                            let numComments = data[NUM_COMMENTS] as? Int ?? 0
-                            let documentID = document.documentID
-                            
-                            let newThought = Thought(username: username, timestamp: timestamp, thoughtTxt: thoughtTxt, numLikes: numLikes, numComments: numComments, documentId: documentID)
-                            
-                            self.thoughts.append(newThought)
-                        }
+                        self.thoughts = Thought.parseData(snapshot: snapshot)
                         self.tableView.reloadData()
                     }
             }
