@@ -14,16 +14,23 @@ enum ThoughtCategory : String {
     case crazy = "crazy"
     case popular = "popular"
 }
-class MainVC: UIViewController {
+class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     // Outlets
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }
 
