@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AddThoughtVC: UIViewController, UITextViewDelegate {
     // Outlets
@@ -14,6 +15,10 @@ class AddThoughtVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var userNameTxt: UITextField!
     @IBOutlet weak var thoughtTxt: UITextView!
     @IBOutlet weak var postBtn: UIButton!
+    
+    // Variables
+    private var selectedCategory = ThoughtCategory.funny.rawValue
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +39,37 @@ class AddThoughtVC: UIViewController, UITextViewDelegate {
     
     // Checks if button is pressed
     @IBAction func postBtnTapped(_ sender: Any) {
+        guard let username = userNameTxt.text else { return }
+        
+        // Adds post to firestore collection
+        Firestore.firestore().collection("thoughts").addDocument(data: [
+            "category" : selectedCategory,
+            "numComments" : 0,
+            "numLikes" : 0,
+            "thoughtTxt" : thoughtTxt.text,
+            "timestamp" : FieldValue.serverTimestamp(),
+            "username" : username
+            ]) { (err) in
+            if let err = err {
+                debugPrint("Error adding document: \(err)")
+            } else {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     // Checks if category is changed
     @IBAction func categoryChanged(_ sender: Any) {
+        switch categorySegment.selectedSegmentIndex {
+        case 0:
+            selectedCategory = ThoughtCategory.funny.rawValue
+        case 1:
+            selectedCategory = ThoughtCategory.serious.rawValue
+        case 2:
+            selectedCategory = ThoughtCategory.crazy.rawValue
+        default:
+            selectedCategory = ThoughtCategory.funny.rawValue
+        }
     }
     
 }
