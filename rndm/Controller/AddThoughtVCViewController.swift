@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AddThoughtVCViewController.swift
 //  rndm
 //
 //  Created by Thomas Pickup on 25/11/2018.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AddThoughtVCViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
-
-
 }
-
