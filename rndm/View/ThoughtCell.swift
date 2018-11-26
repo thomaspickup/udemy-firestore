@@ -18,7 +18,6 @@ class ThoughtCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func configureCell(thought : Thought) {
