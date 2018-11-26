@@ -10,6 +10,7 @@
 		0E26C8DFAED001A7F29A0482 /* Pods_rndm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D2F098A6257957C6915F56 /* Pods_rndm.framework */; };
 		FE004D9421AB6DB4004D8941 /* AddThoughtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE004D9321AB6DB4004D8941 /* AddThoughtVC.swift */; };
 		FE004D9721AB74A9004D8941 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE004D9621AB74A9004D8941 /* Constants.swift */; };
+		FE004D9921AB7B99004D8941 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE004D9821AB7B99004D8941 /* Thought.swift */; };
 		FE4E054C21AB54D500F61708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E054B21AB54D500F61708 /* AppDelegate.swift */; };
 		FE4E054E21AB54D500F61708 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E054D21AB54D500F61708 /* MainVC.swift */; };
 		FE4E055121AB54D500F61708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4E054F21AB54D500F61708 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		43F6D03EDDBAB99954BCA939 /* Pods-rndm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rndm.release.xcconfig"; path = "Pods/Target Support Files/Pods-rndm/Pods-rndm.release.xcconfig"; sourceTree = "<group>"; };
 		FE004D9321AB6DB4004D8941 /* AddThoughtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtVC.swift; sourceTree = "<group>"; };
 		FE004D9621AB74A9004D8941 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FE004D9821AB7B99004D8941 /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
 		FE4E054821AB54D500F61708 /* rndm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rndm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4E054B21AB54D500F61708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE4E054D21AB54D500F61708 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		FE004D9221AB6D41004D8941 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE004D9821AB7B99004D8941 /* Thought.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE004D9421AB6DB4004D8941 /* AddThoughtVC.swift in Sources */,
+				FE004D9921AB7B99004D8941 /* Thought.swift in Sources */,
 				FE4E054E21AB54D500F61708 /* MainVC.swift in Sources */,
 				FE4E054C21AB54D500F61708 /* AppDelegate.swift in Sources */,
 				FE004D9721AB74A9004D8941 /* Constants.swift in Sources */,
