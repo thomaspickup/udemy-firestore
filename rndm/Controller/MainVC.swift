@@ -15,6 +15,7 @@ enum ThoughtCategory : String {
     case crazy = "crazy"
     case popular = "popular"
 }
+
 class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // Outlets
     @IBOutlet private weak var segmentControl: UISegmentedControl!
@@ -25,6 +26,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     private var thoughtsCollectionRef: CollectionReference!
     private var thoughtsListener: ListenerRegistration!
     private var selectedCategory = ThoughtCategory.funny.rawValue
+    private var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,15 +37,25 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
         thoughtsCollectionRef = Firestore.firestore().collection(THOUGHTS_REF)
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        setListener()
+        handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if user == nil {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+                
+                self.present(loginVC, animated: true, completion: nil)
+            } else {
+                self.setListener()
+            }
+        })
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        thoughtsListener.remove()
+        if thoughtsListener != nil {
+            thoughtsListener.remove()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,6 +69,20 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return cell
         } else {
             return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toComments", sender: thoughts[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toComments" {
+            if let destinationVC = segue.destination as? CommentsVC {
+                if let thought = sender as? Thought {
+                    destinationVC.thought = thought
+                }
+            }
         }
     }
     
@@ -105,6 +131,16 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                         self.tableView.reloadData()
                     }
             }
+        }
+    }
+    
+    @IBAction func logOutTapped(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        
+        do {
+            try firebaseAuth.signOut()
+        } catch let signoutError as NSError {
+            debugPrint("Error signing out: \(signoutError)")
         }
     }
 }

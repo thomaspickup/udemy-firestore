@@ -14,6 +14,7 @@
 		FE004D9B21AB7D49004D8941 /* ThoughtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE004D9A21AB7D49004D8941 /* ThoughtCell.swift */; };
 		FE004D9D21AC64FD004D8941 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE004D9C21AC64FD004D8941 /* LoginVC.swift */; };
 		FE004D9F21AC66D6004D8941 /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE004D9E21AC66D6004D8941 /* CreateUserVC.swift */; };
+		FE004DA121ADEE6E004D8941 /* CommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE004DA021ADEE6E004D8941 /* CommentsVC.swift */; };
 		FE4E054C21AB54D500F61708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E054B21AB54D500F61708 /* AppDelegate.swift */; };
 		FE4E054E21AB54D500F61708 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E054D21AB54D500F61708 /* MainVC.swift */; };
 		FE4E055121AB54D500F61708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4E054F21AB54D500F61708 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		FE004D9A21AB7D49004D8941 /* ThoughtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtCell.swift; sourceTree = "<group>"; };
 		FE004D9C21AC64FD004D8941 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		FE004D9E21AC66D6004D8941 /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
+		FE004DA021ADEE6E004D8941 /* CommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsVC.swift; sourceTree = "<group>"; };
 		FE4E054821AB54D500F61708 /* rndm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rndm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4E054B21AB54D500F61708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE4E054D21AB54D500F61708 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				FE004D9321AB6DB4004D8941 /* AddThoughtVC.swift */,
 				FE004D9C21AC64FD004D8941 /* LoginVC.swift */,
 				FE004D9E21AC66D6004D8941 /* CreateUserVC.swift */,
+				FE004DA021ADEE6E004D8941 /* CommentsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				FE004D9B21AB7D49004D8941 /* ThoughtCell.swift in Sources */,
 				FE4E054C21AB54D500F61708 /* AppDelegate.swift in Sources */,
 				FE004D9721AB74A9004D8941 /* Constants.swift in Sources */,
+				FE004DA121ADEE6E004D8941 /* CommentsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
